@@ -1,0 +1,19 @@
+// 640px, 1150px, 1440px
+$breakpoints-up: (
+       "small": "23.43em",
+        "medium": "40em",
+        "large": "71.875em",
+        "xlarge": "90em",
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($map: $breakpoints-up, $key: $size )) {
+    @content;
+  }
+}
+
+// h1{
+//     @include breakpoint('large'){
+//         font-size: 3rem;
+//     }
+// }

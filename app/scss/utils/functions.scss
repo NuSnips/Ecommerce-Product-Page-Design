@@ -1,0 +1,9 @@
+//Source: https://css-tricks.com/snippets/sass/px-to-em-function
+@use "sass:math";
+@function rem($pixels, $context: 16) {
+  @return math.div($pixels, $context) * 1rem;
+}
+
+// h1{
+//     font-size: rem(30); 16px = 1rem;
+// }

@@ -1,0 +1,34 @@
+@use 'variables' as *;
+html{
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: $main-bg;
+  font-family: $font, sans-serif !important;
+}
+
+ul,li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+h1, h3 {
+  margin: 0;
+  padding: 0;
+}
