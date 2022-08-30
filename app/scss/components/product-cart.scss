@@ -1,0 +1,121 @@
+@use '../utils/functions' as *;
+@use '../utils/breakpoints' as *;
+@use '../base/variables' as *;
+
+
+.product-cart {
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  z-index: 8;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  &.cart-visible{
+    display: flex;
+  }
+  @include breakpoint(large) {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.product-cart__content {
+  width: 93%;
+  top: rem(10);
+  position: relative;
+  box-shadow: rem(9) rem(25) rem(34) rem(1) rgba(0, 0, 0, 0.3);
+  border-radius: rem(10);
+  z-index: 8;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  padding: rem(25);
+
+  @include breakpoint(large) {
+    max-width: rem(400);
+    top: rem(-10);
+    right: rem(20)
+  }
+
+  h4 {
+    padding: rem(10) rem(20) rem(25);
+    margin: 0;
+    color: $vd-blue;
+    border-bottom: rem(1) solid hsla(220, 14%, 75%, 40%);
+    @include breakpoint(large) {
+      padding: rem(25);
+    }
+  }
+
+  span {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: rem(100);
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: $dg-blue;
+  }
+
+  ul.product-cart__content-list {
+    flex-grow: 1;
+    height: 100%;
+
+    li {
+      padding: rem(20) 0;
+      display: flex;
+      width: 100%;
+      color: $dg-blue;
+      align-items: center;
+    }
+  }
+
+  .product-cart__content-img {
+    width: rem(80);
+
+    img {
+      width: 100%;
+      border-radius: rem(10);
+    }
+  }
+
+  .product-cart__content-desc {
+    display: flex;
+    flex-direction: column;
+    padding: rem(5) rem(0);
+    margin-left: 5%;
+    width: 90%;
+
+    b {
+      color: $vd-blue;
+    }
+
+    .product-cart__content-desc-title {
+      width: 90%;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 0;
+      min-height: auto;
+    }
+
+  }
+
+  .product-cart__content-checkout {
+  }
+
+  .product-cart__content-delete {
+    transition: all .3s ease-in-out;
+
+    &:hover,
+    &:active {
+      #cart-delete path {
+        fill: $orange;
+      }
+    }
+  }
+}

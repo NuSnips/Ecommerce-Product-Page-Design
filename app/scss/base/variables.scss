@@ -1,22 +1,21 @@
 $white: #ffffff;
 
 $rich-black: rgb(14, 18, 28);
-$vegas-gold:rgb(207, 183, 93);
-$independence:rgba(84, 96, 122);
-$silver-sand: rgb(198, 200, 204);
-$old-lace: rgb(255, 250, 237);
-$light-gray:#eeeeee;
+$orange: hsl(26, 100%, 55%);
+$pale-orange:hsl(25, 100%, 94%);
+$vd-blue:hsl(220, 13%, 13%);
+$dg-blue: hsl(219, 9%, 45%);
+$grayish-blue: hsl(220, 14%, 75%);
+$lg-blue: hsl(223, 64%, 98%);
+$white: hsl(0,0%,100%);
+$black: hsl(0,0%,0%);
 
-$font: 'Open Sans';
-$font-2: 'Quattrocento';
+$font: 'Kumbh Sans';
+
 
 $main-bg: $white;
-$primary-text-color:$rich-black;
-$secondary-text-color: $white;
-$primary-border-color: $old-lace;
-$card-color: $white;
+$primary-text-color:$black;
 
-$basic-border: 1px solid $silver-sand;
 //:root {
 //  --limegreen: hsl(163, 72%, 41%);
 //}

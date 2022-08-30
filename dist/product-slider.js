@@ -1,0 +1,2 @@
+$(document).ready((function(){const e=$(".product-img__main-slides li"),t=$(".product-img__main-nav"),n=$(".product-img__main-thumbs li");let a=1;function i(t){t>e.length||t<1||(e.removeClass("active"),e.eq(a-1).addClass("active"),n.removeClass("selected"),n.eq(a-1).first("a").addClass("selected"))}i(a),t.on("click","span",(function(t){!function(t){let n=a+t;n<=e.length&&n>0&&i(a+=t)}($(this).data("value"))})),n.on("click","a",(function(e){e.preventDefault();let t=$(this).data("index");i(a=t)}))}));
+//# sourceMappingURL=product-slider.js.map
