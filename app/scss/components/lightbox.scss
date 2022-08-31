@@ -25,6 +25,7 @@
     margin: auto;
     position: relative;
     padding: rem(20);
+
     @include breakpoint(large) {
       width: 30%;
       min-width: rem(500);

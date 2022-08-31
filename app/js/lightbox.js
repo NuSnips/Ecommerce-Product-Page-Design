@@ -23,18 +23,20 @@
         });
 
         function changeLbSlide(val){
-            let $idx = $lbSlideIdx+val;
-            if($idx <= $lbSlides.length && $idx > 0)
                 showLbSlides($lbSlideIdx+=val)
         }
 
         function showLbSlides(val){
-            if(!(val > $lbSlides.length) && !(val < 1)){
+            if (val > $lbSlides.length) {
+                $lbSlideIdx = 1
+            }
+            if (val < 1) {
+                $lbSlideIdx = $lbSlides.length;
+            }
                 $lbSlides.removeClass('active');
                 $lbSlides.eq($lbSlideIdx-1).addClass('active');
                 $lbSlideThumbs.removeClass('selected');
                 $lbSlideThumbs.eq($lbSlideIdx-1).first('a').addClass('selected');
-            }
         }
     });
 })();

@@ -63,19 +63,20 @@
   ul.product-cart__content-list {
     flex-grow: 1;
     height: 100%;
+    max-height: rem(400);
+    overflow: auto;
 
     li {
       padding: rem(20) 0;
       display: flex;
       width: 100%;
       color: $dg-blue;
-      align-items: center;
+      align-items: start;
     }
   }
 
   .product-cart__content-img {
     width: rem(80);
-
     img {
       width: 100%;
       border-radius: rem(10);
@@ -110,6 +111,8 @@
 
   .product-cart__content-delete {
     transition: all .3s ease-in-out;
+    padding-top: rem(10);
+    padding-right: rem(20);
 
     &:hover,
     &:active {
